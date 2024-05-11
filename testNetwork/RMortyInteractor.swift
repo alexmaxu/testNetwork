@@ -10,12 +10,15 @@ import Foundation
 struct RMortyInteractor: NetworkInteractor {
     var session: URLSession
     
+    static let shared = RMortyInteractor()
+    
     private init(session: URLSession = .shared) {
         self.session = session
     }
     
     func fetchRMortyCharacters(page: Int) async throws -> ModelResponse {
-        try await getJSONFromURL(request: .getCharactersURLRequest(url: .getCharactersURL, page: page), type: ModelResponse.self)
+        print("5")
+        return try await getJSONFromURL(request: .getCharactersURLRequest(url: .getCharactersURL, page: page), type: ModelResponse.self)
     }
     
 }

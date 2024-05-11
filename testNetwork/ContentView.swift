@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var vm = CharacterListVM()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            ForEach(vm.characters) {character in
+                Text(character.name)
+            }
         }
-        .padding()
     }
 }
 

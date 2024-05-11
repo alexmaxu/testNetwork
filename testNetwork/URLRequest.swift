@@ -19,6 +19,6 @@ extension URLRequest {
 
 extension URLQueryItem {
     static func page(_ page: Int) -> URLQueryItem {
-        URLQueryItem(name: "page", value: "\(page)")
+        return URLQueryItem(name: "page", value: "\(page)")
     }
 }

@@ -10,5 +10,5 @@ import Foundation
 let mainURL = URL(string: "https://rickandmortyapi.com/api")!
 
 extension URL {
-    static let getCharactersURL = mainURL.appending(path: "characters")
+    static let getCharactersURL = mainURL.appending(path: "character")
 }
